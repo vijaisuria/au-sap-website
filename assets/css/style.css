@@ -577,7 +577,99 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+/********** Notice Board, Recent Event CSS Starts **********/  
+/********** News, Event, Notice Board CSS Starts **********/  
+.events{
+  padding: 60px 0;
+}
+.event,
+.note-event {
+   width: 48%; /* Each div occupies half-width */
+   float: left;
+   box-sizing: border-box; /* Include padding and border in the width */
+   margin-right: 2%; /* Add some margin between the two divs */
+}
+.event div {
+  padding:10px;
+  background-color: #f0f3fa;
+}
+.event ul li {
+  margin-bottom: 20px;
+  width: 100%;
+  float: left;
+}
+.heading{
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #151515;
+}
+/********** News, Event, Notice Board CSS Ends **********/
 
+.notice-board {
+  border: 5px solid #ffa38e;
+  padding: 30px;
+  color: white;
+  background-color: #2a692ac7;
+  width: 100%;
+  float: left;
+}
+.notice-board ul {
+  list-style: none;
+  padding: 0px;
+  width: 100%;
+  float: left;
+}
+.notice-board ul li {
+  font-size: 14px;
+  margin-bottom: 20px;
+  width: 100%;
+  float: left;
+}
+.event-list {
+  padding: 10px;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #e1e1e1;
+}
+.event-date {
+  width: 80px;
+  float: left;
+  text-align: center;
+  background: #76c568;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.event-date p {
+  font-weight: 400;
+}
+.event-date h4 {
+  font-weight: 400;
+  font-size:28px;
+}
+.event-content {
+  width: calc(100% - 110px);
+  float: left;
+  margin-left: 10px;
+ /* margin-top: 15px;*/
+}
+
+@media screen and (max-width: 768px) {
+  .event,
+  .note-event {
+     width: 100%; 
+     margin-right: 0; 
+  }
+
+  .event div,
+  .note-event div {
+     padding: 10px;
+   
+  }
+}
+/********** Notice Board, Recent Event CSS Ends **********/
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
@@ -586,15 +678,15 @@ section {
 }
 
 .clients .swiper-slide img {
-  opacity: 0.5;
+/*opacity: 0.5;*/
   transition: 0.3s;
-  filter: grayscale(100);
+ /* filter: grayscale(100);*/
 }
 
-.clients .swiper-slide img:hover {
+/*.clients .swiper-slide img:hover {
   filter: none;
-  opacity: 1;
-}
+ opacity: 1;
+}*/
 
 .clients .swiper-pagination {
   margin-top: 20px;
