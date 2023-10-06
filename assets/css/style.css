@@ -119,7 +119,33 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.custom-header {
+  width: 100%;
+  background-color: #bcc0c5;
+  color: #000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.college-logo {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.college-name {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.tagline {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
 #header {
+  
+  background: rgba(0, 0, 0, 0.8);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
