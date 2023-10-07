@@ -119,33 +119,45 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.custom-header {
+.container-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  background-color: #bcc0c5;
-  color: #000;
-  text-align: center;
-  padding: 20px 0;
 }
 
-.college-logo {
-  max-width: 100px;
-  display: block;
-  margin: 0 auto;
+h1 {
+  text-transform: uppercase;
+	background-image: linear-gradient(to right top, #ffff34, #ffc812, #ff8f2f, #ff554d, #eb1267);
+   background-size: 50% auto;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8vw;
+  animation: gradientAnim 7.5s ease  alternate infinite;
+}
+
+
+@keyframes gradientAnim {
+  to {
+    background-position: 100% top;
+  }
+}
+
+.custom-header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #000;
+  text-align: center;
 }
 
 .college-name {
-  font-size: 24px;
+  font-size: 32px;
   margin-top: 10px;
 }
 
-.tagline {
-  font-size: 18px;
-  margin-top: 5px;
-}
-
 #header {
-  
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
