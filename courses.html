@@ -208,7 +208,7 @@
   <!-- Rendering partials -->
   <script>
     const headerContent = document.getElementById('header-content');
-    fetch('../partials/header.html')
+    fetch('partials/header.html')
       .then(response => response.text())
       .then(data => {
         headerContent.innerHTML = data;
