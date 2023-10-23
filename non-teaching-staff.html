@@ -24,7 +24,6 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="">
 </head>
 
 <body>
@@ -112,25 +111,6 @@
       .then(data => {
         footerContent.innerHTML = data;
       });
-
-
-    const tabLinks = document.querySelectorAll('.nav-link');
-    tabLinks.forEach(link => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        // Get the target div ID from the data-target attribute
-        const targetID = event.target.getAttribute('data-target');
-        // Remove 'show' class from all tab panes
-        const tabPanes = document.querySelectorAll('.tab-pane');
-        tabPanes.forEach(pane => pane.classList.remove('show', 'active'));
-        // Add 'show' and 'active' class to the target tab pane
-        document.getElementById(targetID).classList.add('show', 'active');
-        // Remove 'active' class from all tab links
-        tabLinks.forEach(link => link.classList.remove('active'));
-        // Add 'active' class to the clicked tab link
-        event.target.classList.add('active');
-      });
-    });
   </script>
   
     <!-- Template Main JS File -->
