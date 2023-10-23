@@ -55,14 +55,14 @@
           
                   memberElement.innerHTML = `
                     <div class="member d-flex align-items-start">
-                      <div class="pic"><img src="assets/img/staff/${member.image}" class="img-fluid" alt=""></div>
+                      <div class="pic"><img src="assets/img/staff/${member.image}" class="img-fluid" style="width: 200px; height: 172px;" alt=""></div>
                       <div class="member-info">
                         <a href="${member.profileLink}" style="text-transform: none;">
                           <h4>${member.name}</h4>
                           <span>${member.title}</span>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit;"><i class="ri-shining-line"></i> ${member.field}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit;"><i class="ri-mail-line"></i> ${member.email}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit;"><i class="ri-phone-line"></i> ${member.phone}</p>
+                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-shining-line"></i> ${member.field}</p>
+                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-mail-line"></i> ${member.email}</p>
+                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-phone-line"></i> ${member.phone}</p>
                         </a>
                       </div>
                     </div>

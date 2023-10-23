@@ -37,41 +37,51 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>NON-TEACHING STAFF</h2>
+          <h2>RESEARCH SCHOLARS</h2>
           
           <div class="row" id="teamMembersContainer">
             <!-- Team members will be fetched from json -->
           </div>
           
-          <script>
-            fetch('json/nonteachingStaff.json')
-              .then(response => response.json())
-              .then(data => {
-                const teamMembersContainer = document.getElementById('teamMembersContainer');
-                
-                data.forEach(member => {
-                  const memberElement = document.createElement('div');
-                  memberElement.className = 'col-lg-6 mt-4';
-          
-                  memberElement.innerHTML = `
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="assets/img/staff/${member.image}" class="img-fluid" style="width: 200px; height: 172px;" alt=""></div>
-                      <div class="member-info">
-                        <a href="${member.profileLink}" style="text-transform: none;">
-                          <h4>${member.name}</h4>
-                          <span>${member.title}</span>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-mail-line"></i> ${member.email}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-phone-line"></i> ${member.phone}</p>
-                        </a>
-                      </div>
-                    </div>
-                  `;
-          
-                  teamMembersContainer.appendChild(memberElement);
-                });
-              })
-              .catch(error => console.error('Error loading team members:', error));
-          </script>
+          <div class="row" id="teamMembersContainer">
+            <script>
+                fetch('json/researchScholars.json')
+                  .then(response => response.json())
+                  .then(data => {
+                    const teamMembersContainer = document.getElementById('teamMembersContainer');
+                    
+                    data.forEach(member => {
+                      const memberElement = document.createElement('div');
+                      memberElement.className = 'col-lg-6 mt-4';
+                      
+                      memberElement.innerHTML = `
+                        <div class="member d-flex align-items-start" style="color: black">
+                          <div class="pic" style="width: 30%; height: auto;">
+                            <img src="assets/img/staff/${member.image}" class="img-fluid" alt="">
+                          </div>
+                          <div class="member-info" style="width: 70%; text-transform: none;" >
+                            <a href="${member.profileLink}" style="text-transform: none;">
+                              <h4>${member.name}</h4>
+                              <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-shining-line"></i> ${member.domain}</p>
+                              <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-mail-line"></i> ${member.email}</p>
+                              <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-phone-line"></i> ${member.phone}</p>
+                              <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-calendar-line"></i> Year of Admission: ${member.year}</p>
+                              <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-user-line"></i> Supervisor: ${member.supervisor}</p>
+                              <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-file-text-line"></i> Research Title: ${member.researchTitle}</p>
+                              <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-time-line"></i> Mode of Study: ${member.mode}</p>
+                            </a>
+                          </div>
+                        </div>
+                      `;
+                      
+                      teamMembersContainer.appendChild(memberElement);
+                    });
+                  })
+                  .catch(error => console.error('Error loading research scholars:', error));
+            </script>
+        </div>
+        
+        
           
 
         
