@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Resources | Department of Architecture </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        .card:hover {
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+            cursor: pointer;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .video-details {
+            padding: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <div id="header-content"></div>
+    <!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>ACADEMIC RESOURCES</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Resources</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <div class="inner-page">
+            <div class="container my-5" id="videoContainer">
+                <!--VIDEO CARD TEMPLATE-->
+                <!--
+                    <div class="card">
+                        <div class="video-card row">
+                            <div class="video-preview col-md-6">
+                                <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/709pWTvROWE?si=Jyl6YC3nUiTiWhgH"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-details col-md-6">
+                                <h4>Subject: Subject Name</h4>
+                                <h5>Paper Title: Paper Title</h5>
+                                <h5>Module Title: Module Title</h5>
+                                <h6>Author: Author Name</h6>
+                                <h6>Reviewer: Reviewer Details</h6>
+                            </div>
+                        </div>
+                    </div>
+                -->
+            </div>
+        </div>
+
+
+        <div id="footer-content"></div>
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <!-- Rendering partials -->
+        <script>
+            const headerContent = document.getElementById('header-content');
+            fetch('partials/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContent.innerHTML = data;
+                });
+            const footerContent = document.getElementById('footer-content');
+            fetch('partials/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContent.innerHTML = data;
+                });
+
+            fetch('data/resources.json')
+                .then(response => response.json())
+                .then(data => {
+                    const videoContainer = document.getElementById('videoContainer');
+
+
+                    data.forEach(resource => {
+                        const videoCard = document.createElement('div');
+                        videoCard.className = 'card';
+
+                        let videoContent;
+
+                        if (resource['embed'] !== undefined && resource['embed'] !== '') {
+                            // If 'embed' URL is available, display the video preview
+                            videoContent = `
+          <div class="video-preview col-md-6">
+            <iframe width="100%" height="315"
+              src="${resource['embed']}"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        `;
+                        } else {
+                            // If 'embed' URL is not available, display a logo image
+                            videoContent = `
+          <div class="video-preview col-md-6">
+            <img width="100%" height="315"
+              src="assets/img/unavailable.png" />
+          </div>
+        `;
+                        }
+
+                        videoCard.innerHTML = `
+        <div class="video-card row">
+          ${videoContent}
+          <div class="video-details col-md-6">
+            <h4 class="text-primary"> ${resource['Subject']}</h4>
+            <h5 class="text-warning">${resource['Paper']}</h5>
+            <h5>${resource['Module']}</h5>
+            <h6>Content Author: <span class="text-secondary">${resource['CW']}</span></h6>
+            <h6>Content Reviewer: <span class="text-secondary">${resource['CF']}</span></h6>
+          </div>
+        </div>
+      `;
+
+                        videoContainer.appendChild(videoCard);
+                    });
+                })
+                .catch(error => console.error('Error loading video resources:', error));
+
+        </script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
