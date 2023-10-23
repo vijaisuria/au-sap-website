@@ -1,0 +1,64 @@
+[
+    {
+        "name": "J. Jeyaradha",
+        "email": "ar.jeyaradha@gmail.com",
+        "phone": "9884108140",
+        "image": "team-4.jpg",
+        "profileLink": "https://in.linkedin.com/in/jeyaradha-jayaram-826b1b27b",
+        "year": "July 2022",
+        "supervisor": "Dr. S. Lakhsmi",
+        "domain": "Urban infrastructure - Architectural lighting",
+        "researchTitle": "Evaluation of Urban Infrastructure in the Government school classrooms with respect to Illumination levels - The Case study of Chennai",
+        "mode": "Part-time"
+    },
+    {
+        "name": "S. S. Santhan Athmanam",
+        "email": "santhan.athmanam@gmail.com",
+        "phone": "9750661141",
+        "image": "team-4.jpg",
+        "profileLink": "https://www.linkedin.com/in/santhan-athmanam-s-s-5459a9202",
+        "year": "January 2020",
+        "supervisor": "Dr. Jinu Louishidha Kitchley",
+        "domain": "Computational Architecture",
+        "researchTitle": "Data Analytics and Intelligent technology aided design approach for built  environment",
+        "mode": "Part-time"
+    },
+    {
+        "name": "S. Saravanan",
+        "email": "pixel_space06@yahoo.com",
+        "phone": "9445804424",
+        "image": "team-4.jpg",
+        "profileLink": "",
+        "year": "July 2023",
+        "supervisor": "Dr. M. Pradeep Kumar",
+        "domain": "3D printing in Architecture",
+        "researchTitle": "Exploring complexity of built forms using 3D printing in architecture",
+        "mode": "Part-time"
+    },
+    {
+        "name": "R. Rajeswari",
+        "email": "raaji.ravi@gmail.com",
+        "phone": "9884492200",
+        "image": "team-4.jpg",
+        "profileLink": "https://www.linkedin.com/in/raajiravi/",
+        "year": "July 2023",
+        "supervisor": "Dr. Ranee Vedamuthu",
+        "domain": "Urban Design and Resilience",
+        "researchTitle": "Repositioning water in Urban lives in the context of climate change – Case of a rapidly urbanizing city, Chennai",
+        "mode": "Part-time"
+    },
+    {
+        "name": "J. Sonika",
+        "email": "j.sonika16@gmail.com",
+        "phone": "8870111772",
+        "image": "team-4.jpg",
+        "profileLink": "",
+        "year": "July 2023",
+        "supervisor": "Dr. S. Lakhsmi",
+        "domain": "Urban Design and Transportation",
+        "researchTitle": "A study on Micro mobility as a sustainable mode of transportation for Indian cities",
+        "mode": "Part-time"
+    }
+    
+
+]
