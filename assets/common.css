@@ -1,0 +1,14 @@
+/* Your font imports */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i");
+
+/* Vendor CSS imports */
+@import url("vendor/aos/aos.css");
+@import url("vendor/bootstrap/css/bootstrap.min.css");
+@import url("vendor/bootstrap-icons/bootstrap-icons.css");
+@import url("vendor/boxicons/css/boxicons.min.css");
+@import url("vendor/glightbox/css/glightbox.min.css");
+@import url("vendor/remixicon/remixicon.css");
+@import url("vendor/swiper/swiper-bundle.min.css");
+
+/* Your custom styles */
+@import url("css/style.css");
