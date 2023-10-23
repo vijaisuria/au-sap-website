@@ -31,29 +31,28 @@
   <!-- ======= Header ======= -->
   <div id="header-content"></div>
   <!-- End Header -->
+      <!-- ======= Teaching Staff ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
 
-  <!-- ======= Teaching Staff ======= -->
-  <section id="team" class="team section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>TEACHING STAFF</h2>
-
-        <div class="row" id="teamMembersContainer">
-          <!-- Team members will be fetched from json -->
-        </div>
-
-        <script>
-          fetch('json/teachingStaff.json')
-            .then(response => response.json())
-            .then(data => {
-              const teamMembersContainer = document.getElementById('teamMembersContainer');
-
-              data.forEach(member => {
-                const memberElement = document.createElement('div');
-                memberElement.className = 'col-lg-6 mt-4';
-
-                memberElement.innerHTML = `
+        <div class="section-title">
+          <h2>TEACHING STAFF</h2>
+          
+          <div class="row" id="teamMembersContainer">
+            <!-- Team members will be fetched from json -->
+          </div>
+          
+          <script>
+            fetch('data/teachingStaff.json')
+              .then(response => response.json())
+              .then(data => {
+                const teamMembersContainer = document.getElementById('teamMembersContainer');
+                
+                data.forEach(member => {
+                  const memberElement = document.createElement('div');
+                  memberElement.className = 'col-lg-6 mt-4';
+          
+                  memberElement.innerHTML = `
                     <div class="member d-flex align-items-start">
                       <div class="pic"><img src="assets/img/staff/${member.image}" class="img-fluid" style="width: 200px; height: 172px;" alt=""></div>
                       <div class="member-info">
