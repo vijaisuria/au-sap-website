@@ -31,33 +31,32 @@
     <!-- ======= Header ======= -->
   <div id="header-content"></div>
   <!-- End Header -->
-  <!-- ======= Breadcrumbs ======= -->
+    <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
             <h2>PEOPLE</h2>
             <ol>
                 <li><a href="index.html">Home</a></li>
-                <li>Overseas Professors</li>
+                <li>List of Supervisors</li>
             </ol>
         </div>
 
     </div>
 </section><!-- End Breadcrumbs -->
-      
-      <!-- ======= OVERSEAS PROFESSORS ======= -->
+      <!-- ======= Teaching Staff ======= -->
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>OVERSEAS PROFESSORS</h2>
+          <h2>LIST OF SUPERVISORS</h2>
           
           <div class="row" id="teamMembersContainer">
             <!-- Team members will be fetched from json -->
           </div>
           
           <script>
-            fetch('data/overseasProfessors.json')
+            fetch('data/supervisors.json')
               .then(response => response.json())
               .then(data => {
                 const teamMembersContainer = document.getElementById('teamMembersContainer');
@@ -65,51 +64,45 @@
                 data.forEach(member => {
                   const memberElement = document.createElement('div');
                   memberElement.className = 'col-lg-6 mt-4';
-                  
+          
                   memberElement.innerHTML = `
-                        <div class="member d-flex align-items-start" style="color: black">
-                          <div class="pic" style="width: 30%; height: auto;">
+            <div class="member d-flex align-items-start">
+                <div class="pic" style="width: 30%; height: auto;">
                             <img src="assets/img/staff/${member.image}" class="img-fluid" alt="">
-                          </div>
-                          <div class="member-info" style="width: 70%; text-transform: none;" >
-                            <a href="${member.profileLink}" style="text-transform: none;">
-                          <h4>${member.name}</h4>
-                          <span>${member.title}</span>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-shining-line"></i> ${member.field}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-mail-line"></i> ${member.email}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-phone-line"></i> ${member.phone}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-home-line"></i> Address: ${member.address}</p>
-                            </a>
-                          </div>
-                        </div>
-                      `;
-
-                  memberElement.innerHTML = `
-                    <div class="member d-flex align-items-start">
-                      <div class="pic"><img src="assets/img/staff/${member.image}" class="img-fluid" style="width: 200px; height: 172px;" alt=""></div>
-                      <div class="member-info">
-                        <a href="${member.profileLink}" style="text-transform: none;">
-                          <h4>${member.name}</h4>
-                          <span>${member.title}</span>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-shining-line"></i> ${member.field}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-mail-line"></i> ${member.email}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-phone-line"></i> ${member.phone}</p>
-                          <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-home-line"></i> Address: ${member.address}</p>
-                        </a>
-                      </div>
-                    </div>
-                  `;
+                </div>
+                <div class="member-info" style="width: 70%; text-transform: none;" >
+                <div class="member-info">
+                    <a href="${member.profileLink}" style="text-transform: none;">
+                    <h4>${member.name}</h4>
+                    <span>${member.title}</span>
+                    <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-mail-line"></i> ${member.email}</p>
+                    <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;"><i class="ri-phone-line"></i> ${member.phone}</p>
+                    <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;">Field: ${member.field}</p>
+                    <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;">Project: ${member.project}</p>
+                    <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;">Funding Agency: ${member.fundingAgency}</p>
+                    <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;">Duration: ${member.duration}</p>
+                    <p style="text-transform: none; font-weight: 400; font-family: inherit; color: black; font-style: normal;">Total Amount: ${member.totalAmount}</p>
+                    </a>
+                </div>
+                </div>
+            </div>
+        `;
           
                   teamMembersContainer.appendChild(memberElement);
                 });
               })
               .catch(error => console.error('Error loading team members:', error));
           </script>
+          
+
+        
+
+
 
         </div>
 
       </div>
-    </section><!-- End OVERSEAS PROFESSORS Section -->
+    </section><!-- End Team Section -->
 
     <div id="footer-content"></div>
   
@@ -140,6 +133,25 @@
       .then(data => {
         footerContent.innerHTML = data;
       });
+
+
+    const tabLinks = document.querySelectorAll('.nav-link');
+    tabLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        // Get the target div ID from the data-target attribute
+        const targetID = event.target.getAttribute('data-target');
+        // Remove 'show' class from all tab panes
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        tabPanes.forEach(pane => pane.classList.remove('show', 'active'));
+        // Add 'show' and 'active' class to the target tab pane
+        document.getElementById(targetID).classList.add('show', 'active');
+        // Remove 'active' class from all tab links
+        tabLinks.forEach(link => link.classList.remove('active'));
+        // Add 'active' class to the clicked tab link
+        event.target.classList.add('active');
+      });
+    });
   </script>
   
     <!-- Template Main JS File -->
