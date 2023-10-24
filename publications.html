@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Publications | Department of Architecture </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .publication-section {
+      background-image: url('assets/img/hod-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 24px;
+      position: relative;
+    }
+
+    .publication-section img {
+      height: 320px;
+      float: right;
+    }
+
+    .grey-overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .text-side {
+      padding: 20px;
+      z-index: 5;
+      text-align: center;
+
+    }
+
+    .image-side {
+      z-index: 5;
+    }
+
+    .text-header {
+      color: white !important;
+      font-weight: bold !important;
+      font-size: 3rem !important;
+      position: relative;
+      top: 120px;
+    }
+
+    @media (max-width: 768px) {
+
+      .text-side,
+      .image-side {
+        width: 100%;
+      }
+
+      .publication-section {
+        text-align: center;
+      }
+
+      .publication-section img {
+        height: 200px;
+        float: none;
+      }
+
+      .text-header {
+        font-size: 1.8rem !important;
+        top: 0;
+      }
+    }
+
+    .card:hover {
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      cursor: pointer
+    }
+
+    .duration {
+      background-color: #e0dcdc;
+      width: 100%;
+      max-width: 70px;
+      height: 30px;
+    }
+
+    /*for maobile screen change */
+    @media screen and (max-width: 768px) {
+      .duration-c {
+        margin-top: 8px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <div id="header-content"></div>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <!--
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>CONFERENCES</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Conferences</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+    -->
+    <!-- End Breadcrumbs -->
+
+    <div class="inner-page">
+      <div class="container-fluid publication-section">
+        <div class="grey-overlay"></div>
+        <div class="row">
+          <div class="col-md-6 text-side">
+            <p class="text-header h1 text-uppercase">Publication</p>
+          </div>
+          <div class="col-md-6 image-side">
+            <img src="assets/img//charts/publication-rm.png" alt="Publication Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="my-5">
+          <div class="d-flex row flex-column flex-md-row justify-content-between ">
+            <div class="btn-group mb-3">
+              <button type="button" class="btn btn-outline-success fw-bold" style="border-width: 2px !important;"
+                onclick="scrollToJournal()">Journals</button>
+              <button type="button" class="btn btn-outline-success fw-bold" style="border-width: 2px !important;"
+                onclick="scrollToBook()">Books</button>
+              <button type="button" class="btn btn-outline-success fw-bold" style="border-width: 2px !important;"
+                onclick="scrollToBook()">Conferences</button>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Publications"
+                style="border-width: 2px !important;" aria-label="Search Publications">
+              <div class="input-group-text bg-primary-subtle"><i class="ri-search-line"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 mt-3 px-12" id="journal">
+          <h2>List of Journals</h2>
+          <div class="container mt-4" id="journalsContainer">
+
+            <!-- CONFERENCE CARD TEMPLATE START -->
+            <!--
+                <div class="card card-margin mt-3">
+                  <div class="card-header">
+                    <h5 class="card-title">Conference Title</h5>
+                  </div>
+                  <div class="px-3 pt-3">
+                    <p class="card-authors d-inline">
+                      <strong>Authors: </strong>
+                      <span><a href="#">Authors</a></span>
+                    </p>
+                    <p class="card-publisher">
+                      <span class="journalName"><a href="https://doi.org/10.1007/978-3-319-11099-4">Springer
+                          Nature</a></span>
+                      <span class="card-volume"></span>
+                      <span class="card-year">Year: 2023</span> <br>
+                      <span class="card-doi"><strong>DOI: </strong><a href="https://doi.org/10.1007/978-3-319-11099-4">
+                          10.1007/978-3-319-11099-4</a></span>
+                    </p>
+                  </div>
+                </div>
+            -->
+            <!-- TEMPLATE END -->
+
+          </div>
+        </div>
+
+        <div class="my-5 px-12" id="book">
+          <h2>List of Books / Conferences</h2>
+          <div class="container mt-4" id="booksContainer">
+            <!-- CONFERENCE CARD TEMPLATE START -->
+            <!--
+              <div class="card card-margin mt-3">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="row">
+                      <div class="col-md-10">
+                        <span class="card-title text-uppercase h5" style="max-width: 80%">Book title</span>
+                      </div>
+                      <div class="col-md-2 duration-c">
+                        <span class="px-2 py-1 fs-6 rounded fw-bold float-md-end duration">year</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3 pt-3">
+                  <p class="card-authors d-inline">
+                    <strong>Authors: </strong>
+                    <span><a href="#">Authors</a></span>
+                  </p>
+                  <p class="card-publisher">
+                    <span class="card-publication"><strong>Publication: </strong> Book</span>
+                    <span class="card-publisher"><a href="https://doi.org/10.1007/978-3-319-11099-4">Shanlax
+                        Publications</a></span>
+                    <span class="card-issn">ISBN 978-93-93737-63-2</span>
+                  </p>
+                </div>
+              </div>
+              -->
+            <!-- TEMPLATE END -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <div id="footer-content"></div>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Rendering partials -->
+  <script>
+    const headerContent = document.getElementById('header-content');
+    fetch('partials/header.html')
+      .then(response => response.text())
+      .then(data => {
+        headerContent.innerHTML = data;
+      });
+    const footerContent = document.getElementById('footer-content');
+    fetch('partials/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        footerContent.innerHTML = data;
+      });
+
+
+    fetch('data/journals.json')
+      .then(response => response.json())
+      .then(data => {
+        const conferencesContainer = document.getElementById('journalsContainer');
+
+        data.forEach(conference => {
+          const conferenceCard = document.createElement('div');
+          conferenceCard.className = 'card card-margin mt-3';
+
+          conferenceCard.innerHTML = `
+        <div class="card-header">
+          <h5 class="card-title text-primary">${conference['Title of the Publication']}</h5>
+        </div>
+        <div class="px-3 pt-3">
+          <p class="card-authors d-inline">
+            <strong>Authors: </strong>
+            <span class="text-secondary">${conference['Names of Authors']}</span>
+          </p>
+          <p class="card-publisher fst-italic fw-lighter">
+            <span class="journalName">${conference['Name of the Journal']}</span>
+            <span class="card-volume">${conference['Volume No., Issue No. and Page Nos.']}</span>
+            <span class="card-year">Year: ${conference['Year of Publication']}</span> <br>
+            ${conference['DOI'] !== '' ? `<span class="card-doi fw-bold"><strong>DOI: </strong><a href="${conference['DOI']}">${conference['DOI']}</a></span>` : ''}
+          </p>
+        </div>
+      `;
+
+          conferencesContainer.appendChild(conferenceCard);
+        });
+      })
+      .catch(error => console.error('Error loading conferences:', error));
+
+
+    fetch('data/books.json')
+      .then(response => response.json())
+      .then(data => {
+        const booksContainer = document.getElementById('booksContainer');
+
+        data.forEach(book => {
+          const bookCard = document.createElement('div');
+          bookCard.className = 'card card-margin mt-3';
+
+          bookCard.innerHTML = `
+        <div class="card-header">
+          <div class="row">
+            <div class="row">
+              <div class="col-md-10">
+                <span class="card-title h5 text-primary" style="max-width: 80%" >${book['Name']}</span>
+              </div>
+              <div class="col-md-2 duration-c">
+                <span class="px-2 py-1 fs-6 rounded fw-bold float-md-end duration">${book['Year']}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-3 pt-3">
+          <p class="card-authors d-inline">
+            <strong>Authors: </strong>
+            <span><a class="text-secondary" href="#">${book['Authors']}</a></span>
+          </p>
+          <p class="card-publisher fst-italic fw-lighter">
+            <span class="card-publication"> ${book['Publication']}</span>
+            <span class="card-publisher"><a href="${book['Publisher']}">${book['Publisher']}</a></span>
+            <span class="card-issn">${book['ISSN']}</span>
+          </p>
+        </div>
+      `;
+
+          booksContainer.appendChild(bookCard);
+        });
+      })
+      .catch(error => console.error('Error loading books:', error));
+
+    function scrollToJournal() {
+      const journalSection = document.getElementById("journal");
+
+      if (journalSection) {
+        journalSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    function scrollToBook() {
+      const bookSection = document.getElementById("book");
+
+      if (bookSection) {
+        bookSection.scrollIntoView({ behavior: "smooth" });
+      }
+
+    }
+
+  </script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
