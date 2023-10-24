@@ -1,13 +1,15 @@
 # School of Architecture and Planning Website
 
-Welcome to the School of Architecture and Planning website, created by the students of MIT, Anna University. This website serves as a platform to showcase our college and its various activities, as well as provide information for prospective students and the public.
+Welcome to the Department of Architecture, SAP Campus website, created by the students of MIT, Anna University. This website serves as a platform to showcase our college and its various activities, as well as provide information for prospective students and the public.
 
 ## Contributors
+
 - [Vijai Suria M](https://github.com/vijaisuria)
 - [Mugundh J B](https://github.com/j-b-mugundh)
 - [Kiran Kumar M](https://github.com/kirankumar6676)
 
 ## Tech Stack Used
+
 - HTML5
 - CSS
 - JavaScript
@@ -17,6 +19,9 @@ Welcome to the School of Architecture and Planning website, created by the stude
 
 - Information about the School of Architecture and Planning
 - Courses and Programs offered
+- Consultancy & Research Project Details
+- E-Resources and Learning Materials
+- Publications and Papers List
 - Faculty and Staff details
 - Admission procedures
 - News and Events
@@ -28,7 +33,7 @@ Welcome to the School of Architecture and Planning website, created by the stude
 1. Clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/school-of-architecture-website.git
+   git clone https://github.com/vijaisuria/au-sap-website.git
    ```
 
 2. Open the project directory in your preferred code editor.
