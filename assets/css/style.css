@@ -136,6 +136,15 @@ h1 {
     #ff554d,
     #eb1267
   );
+  /* background-image: linear-gradient(
+    to right top,
+    #003171, 
+  #fe0000, 
+  #4db2ff,
+  #ffffff, 
+  #003171,
+  #ffffff 
+  ); */
   background-size: 50% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
