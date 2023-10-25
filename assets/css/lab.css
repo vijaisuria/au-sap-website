@@ -1,0 +1,142 @@
+
+.content-section {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with 300px minimum width */
+  gap: 20px; 
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+}
+
+.content-section .card {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex: 0 1 calc(33.33% - 20px);
+  margin: 10px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  max-width: 100%; 
+}
+
+
+.content-section .card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; 
+}
+
+.content-section .card h2 {
+  margin: 10px 0;
+  font-size: 24px; 
+  color: #1662a1;
+  font-family: sans-serif;
+}
+
+.content-section .card p {
+  font-size: 14px; 
+  line-height: 1.5;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+
+.overlay {
+  position:absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background:#fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor:pointer;
+  border-radius: 50%;
+  transition: 0.5s;
+
+}
+
+ .overlay:hover{
+ bottom: 0;
+ right: 0;
+ width: 100%;
+ height: 100%;
+ box-shadow: none;
+ opacity: 0.9;
+ border-radius: 0;
+
+}
+
+.overlay:before
+{
+ content:'Read';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ color:#000 ;
+ font-size: 12px;
+ text-transform: uppercase;
+ font-weight: 500;
+ letter-spacing: 1px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition-delay: 0.5s;
+}
+.overlay:hover:before{
+display: none;
+transition-delay: 0s;
+
+}
+.content{
+  position:absolute;
+  padding: 20px;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  box-sizing: border-box;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0s;
+ 
+  
+}
+.overlay:hover ~ .content
+{
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2;
+  transition-delay: 0.2s;
+}
+.content p{
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .content-section {
+      grid-template-columns: repeat(2, 1fr); 
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .content-section .card {
+      flex: 1;
+      max-width: 400px;
+  }
+
+  .content-section .card h2 {
+      font-size: 28px; 
+  }
+
+  .content-section .card p {
+      font-size: 16px; 
+  }
+}

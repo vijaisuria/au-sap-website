@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Facilities | Department of Architecture </title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+    
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="stylesheet">
+    
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/lab.css" rel="stylesheet">
+    </head>
+<body>
+    <!-- ======= Header ======= -->
+  <div id="header-content"></div>
+  <!-- End Header -->
+  <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section class="breadcrumbs">
+          <div class="container">
+              <div class="d-flex justify-content-between align-items-center">
+                  <h2>FACILITIES</h2>
+                  <ol>
+                      <li><a href="index.html">Home</a></li>
+                      <li>Academic Lab</li>
+                  </ol>
+              </div>
+
+          </div>
+      </section><!-- End Breadcrumbs -->
+      <!-- LAB DESC -->
+      <section id="dept_desc">
+
+        <div class="container" data-aos="fade-up" style="text-align: justify;">
+          <h3 class="about row" style="font-weight: bold;">Academic Lab</h3>
+          <br>
+          The School has a well-equipped Computer Lab for U.G. students with a total no. of 54 computers,10 Laptops,
+           an A0 printer and one exclusive Computer Lab for the M. Arch consisting of 20 computers. 
+           All labs, smart classes and conference rooms are equipped with LCD projectors (12 Nos.). 
+           The Department of Planning has a separate computer lab with 19 computers with LCD projection facility and 1 A0 printer. 
+           All Computers are connected to the internet. The systems are installed with AutoCAD and Autodesk Revit student version software.
+           The Maintenance lab is equipped with 4 computers, 1 photo copier, 2 A4 black and white printers and 2 A4 scanners. 
+          All teaching faculties are provided with individual computers with internet connectivity.
+
+        </div>
+      </section>
+      <!--END LAB DESC-->
+     
+      <div class="container">
+        <div class="content-section">
+            <div class="card">
+                <div>
+                    <img src="assets/img/LAB/ugLab.jpg" alt="Lab1">
+                <h2>COMPUTER LAB-UG</h2>
+                <p>COMPUTERS : 54</p>
+                
+                <p></p>
+                </div>
+                <div class="overlay"></div>
+                <div class="content">
+                    <p>The School has a well-equipped Computer Lab for U.G. students with a total no. of 54 computers,
+                        10 Laptops, an A0 printer </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <img src="assets/img/LAB/pgLab.jpg" alt="Lab1">
+                <h2>PG LAB</h2>
+                <p>COMPUTERS : 10 </p>
+                </div>
+                <div class="overlay"></div>
+                <div class="content">
+                    <p>This exclusive Computer Lab for the M. Arch consisting of 20 computers.  </p>
+                </div>
+            </div>
+
+                
+            </div>
+        </div>
+    </div>
+     
+
+  
+
+     
+
+      </main>
+
+      <div id="footer-content"></div>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Rendering partials -->
+<script>
+  const headerContent = document.getElementById('header-content');
+  fetch('partials/header.html')
+    .then(response => response.text())
+    .then(data => {
+      headerContent.innerHTML = data;
+    });
+  const footerContent = document.getElementById('footer-content');
+  fetch('partials/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      footerContent.innerHTML = data;
+    });
+
+
+  const tabLinks = document.querySelectorAll('.nav-link');
+  tabLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      // Get the target div ID from the data-target attribute
+      const targetID = event.target.getAttribute('data-target');
+      // Remove 'show' class from all tab panes
+      const tabPanes = document.querySelectorAll('.tab-pane');
+      tabPanes.forEach(pane => pane.classList.remove('show', 'active'));
+      // Add 'show' and 'active' class to the target tab pane
+      document.getElementById(targetID).classList.add('show', 'active');
+      // Remove 'active' class from all tab links
+      tabLinks.forEach(link => link.classList.remove('active'));
+      // Add 'active' class to the clicked tab link
+      event.target.classList.add('active');
+    });
+  });
+</script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
