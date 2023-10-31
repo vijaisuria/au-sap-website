@@ -1,0 +1,13 @@
+.chart-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .chartjs-bar-background {
+    border-radius: 5px;
+  }
