@@ -131,7 +131,11 @@ h6 {
 }
 
 .university-logo {
-  max-width: 280px;
+  max-width: 480px;
+}
+
+.clg-logo {
+  max-width: 80px;
 }
 
 .container-text {
@@ -385,6 +389,23 @@ h1 {
 
   .navbar ul {
     display: none;
+  }
+
+  .university-logo {
+    max-width: 280px;
+  }
+
+  .clg-logo {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .university-logo {
+    max-width: 240px;
+  }
+  .clg-logo {
+    max-width: 40px;
   }
 }
 
