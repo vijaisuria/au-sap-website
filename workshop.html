@@ -35,8 +35,8 @@
       <div class="container d-flex align-items-center justify-content-center">
         <nav id="navbar" class="navbar order-last order-lg-0 justify-content-center">
           <ul>
-            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-            <li><a class="nav-link scrollto" href="index.html#dept_desc">About us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#dept_desc">About us</a></li>
             <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li class="dropdown"><a href="academics.html"><span>Programmes Offered</span> <i
@@ -154,9 +154,10 @@
 
             <li class="dropdown"><a href="https://www.sapaa.org.in/">Alumni <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="https://www.sapaa.org.in/">SAPAA</a></li>
-                <li><a href="https://www.sapaa.org.in/albums.dz">Groups</a></li>
-                <li><a href="https://www.sapaa.org.in/events.dz">Events</a></li>
+                <li><a href="https://www.sapaa.org.in/">Groups</a></li>
+                <li><a href="https://www.sapaa.org.in/">Homecoming-2023</a></li>
+                <li><a href="https://www.sapaa.org.in/">Awards & Achievements</a></li>
+                <li><a href="https://www.sapaa.org.in/">Notable Alumni</a></li>
               </ul>
 
             <li class="dropdown"><a href="#">Logins <i class="bi bi-chevron-down"></i></a>
@@ -177,43 +178,44 @@
 
       </div>
     </header>
-  </div>
+      
+  </div>
   <!-- End Header -->
   <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <h2>EVENTS</h2>
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Workshop</li>
-            </ol>
-        </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>EVENTS</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Workshop</li>
+        </ol>
+      </div>
 
     </div>
-</section><!-- End Breadcrumbs -->
-      <!-- ======= WorkShop ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
+  </section><!-- End Breadcrumbs -->
+  <!-- ======= WorkShop ======= -->
+  <section id="team" class="team section-bg">
+    <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>WORKSHOP</h2>
-          
-          <div class="row" id="teamMembersContainer">
-            <!-- Workshop details will be fetched from json -->
-          </div>
-          
-          <script>
-            fetch('data/workshop.json')
-              .then(response => response.json())
-              .then(data => {
-                const teamMembersContainer = document.getElementById('teamMembersContainer');
-                
-                data.forEach(member => {
-                  const memberElement = document.createElement('div');
-                  memberElement.className = 'col-lg-6 mt-4';
-          
-                  memberElement.innerHTML = `
+      <div class="section-title">
+        <h2>WORKSHOP</h2>
+
+        <div class="row" id="teamMembersContainer">
+          <!-- Workshop details will be fetched from json -->
+        </div>
+
+        <script>
+          fetch('data/workshop.json')
+            .then(response => response.json())
+            .then(data => {
+              const teamMembersContainer = document.getElementById('teamMembersContainer');
+
+              data.forEach(member => {
+                const memberElement = document.createElement('div');
+                memberElement.className = 'col-lg-6 mt-4';
+
+                memberElement.innerHTML = `
                     <div class="member d-flex align-items-start">
                       <div class="pic"><img src="assets/img/workshop/${member.image}" class="img-fluid" style="width: 200px; height: 172px;" alt=""></div>
                       <div class="member-info">

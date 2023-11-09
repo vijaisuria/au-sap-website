@@ -24,6 +24,54 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    .pdf {
+      height: 60vh;
+      border: 1px solid #ccc;
+      background-color: #b8b8b8;
+      padding: 12px;
+    }
+
+    .pdf-link {
+      color: #333;
+      padding: 12px;
+      background-color: #ffffff;
+    }
+
+    .active-pdf,
+    .pdf-link:hover {
+      color: #fff;
+      background-color: #333;
+    }
+
+    #pdf-downloader {
+      display: none;
+    }
+
+    .pdf-viewer {
+      height: 56vh;
+    }
+
+    .section-title {
+      padding-bottom: 10px !important;
+      padding-top: 20px !important;
+    }
+
+    @media screen and (max-width: 991px) {
+      .pdf {
+        height: 40vh;
+      }
+
+      .pdf-viewer {
+        display: none;
+      }
+
+      #pdf-downloader {
+        display: block;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -35,9 +83,10 @@
       <div class="container d-flex align-items-center justify-content-center">
         <nav id="navbar" class="navbar order-last order-lg-0 justify-content-center">
           <ul>
-            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-            <li><a class="nav-link scrollto" href="index.html#dept_desc">About us</a></li>
-            <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#dept_desc">About us</a></li>
+            <li class="dropdown"><a href="#" class="active"><span>Academics</span> <i
+                  class="bi bi-chevron-down"></i></a>
               <ul>
                 <li class="dropdown"><a href="academics.html"><span>Programmes Offered</span> <i
                       class="bi bi-chevron-right"></i></a>
@@ -154,9 +203,10 @@
 
             <li class="dropdown"><a href="https://www.sapaa.org.in/">Alumni <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="https://www.sapaa.org.in/">SAPAA</a></li>
-                <li><a href="https://www.sapaa.org.in/albums.dz">Groups</a></li>
-                <li><a href="https://www.sapaa.org.in/events.dz">Events</a></li>
+                <li><a href="https://www.sapaa.org.in/">Groups</a></li>
+                <li><a href="https://www.sapaa.org.in/">Homecoming-2023</a></li>
+                <li><a href="https://www.sapaa.org.in/">Awards & Achievements</a></li>
+                <li><a href="https://www.sapaa.org.in/">Notable Alumni</a></li>
               </ul>
 
             <li class="dropdown"><a href="#">Logins <i class="bi bi-chevron-down"></i></a>
@@ -177,7 +227,8 @@
 
       </div>
     </header>
-  </div>
+      
+  </div>
   <!-- End Header -->
 
   <main id="main">
@@ -271,7 +322,37 @@
                   </tr>
                 </tbody>
               </table>
+              <p>
+                <a href="https://cac.annauniv.edu/" target="_blank" rel="noopener noreferrer"> Eligibility criteria and
+                  further details of the programmes are available at the Centre for Academic Course webpage
+                  <span class="text-primary" style="text-decoration: underline;">https://cac.annauniv.edu/</span>.
+                </a>
+              </p>
+              <div class="container ug">
+                <div class="section-title">
+                  <h2>Regulations & Amendments</h2>
+                </div>
+                <div class="pdf mb-5">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <nav class="nav flex-column">
+                        <a class="pdf-link active-pdf border"
+                          href="https://cac.annauniv.edu/udregulations/04.%20Reg%202019%20B.Arch.pdf">R-2019
+                          B.ARCH regulations</a>
+                        <a class="pdf-link border"
+                          href="https://cac.annauniv.edu/uddetails/ammendcands/28th%20AC/02.%20B.Arch.%20Amend%202019-clause%2011.pdf">R-2019
+                          Amendments</a>
+                      </nav>
+                    </div>
+                    <div class="col-md-9">
+                      <iframe class="pdf-viewer" id="pdf-viewer-ug" src="" width="100%" height="100%"
+                        frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="tab-pane fade table-responsive" id="pg">
               <table class="table table-bordered table-hover">
                 <thead>
@@ -300,8 +381,38 @@
                   </tr>
                 </tbody>
               </table>
-
+              <p>
+                <a href="https://cac.annauniv.edu/" target="_blank" rel="noopener noreferrer"> Eligibility criteria and
+                  further details of the programmes are available at the Centre for Academic Course webpage
+                  <span class="text-primary" style="text-decoration: underline;">https://cac.annauniv.edu/</span>.
+                </a>
+              </p>
+              <div class="container pg">
+                <div class="section-title">
+                  <h2>Regulations</h2>
+                </div>
+                <div class="pdf mb-5">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <nav class="nav flex-column">
+                        <a class="pdf-link active-pdf border"
+                          href="https://cac.annauniv.edu/udregulations/05.%20Reg%202019%20M.Arch%20M.Plan.pdf">R-2019-
+                          M.Arch (General)</a>
+                        <a class="pdf-link border"
+                          href="https://cac.annauniv.edu/udregulations/R2023/M.%20Arch%202023..pdf">R-2023-M.Arch
+                          (Landscape)
+                        </a>
+                      </nav>
+                    </div>
+                    <div class="col-md-9">
+                      <iframe class="pdf-viewer" id="pdf-viewer-pg" src="" width="100%" height="100%"
+                        frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="tab-pane fade table-responsive" id="research">
               <table class="table table-bordered table-hover table-responsive">
                 <thead>
@@ -323,20 +434,71 @@
                   </tr>
                 </tbody>
               </table>
+              <p>
+                <a href="https://cac.annauniv.edu/" target="_blank" rel="noopener noreferrer"> Eligibility criteria and
+                  further details regarding research are available at
+                  <span class="text-primary"
+                    style="text-decoration: underline;">https://cfr.annauniv.edu/research/academics/index.php</span>.
+                </a>
+              </p>
+              <div class="container pg">
+                <div class="section-title">
+                  <h2>Regulations</h2>
+                </div>
+                <div class="pdf mb-5">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <nav class="nav flex-column">
+                        <a class="pdf-link active-pdf border"
+                          href="https://cfr.annauniv.edu/research/regulation/Ph.D-Regulation.pdf">R-2020 Ph.D Regulation
+                        </a>
+
+                      </nav>
+                    </div>
+                    <div class="col-md-9">
+                      <iframe id="pdf-viewer-phd" class="pdf-viewer" src="" width="100%" height="100%"
+                        frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <p>
-            <a href="https://cac.annauniv.edu/" target="_blank" rel="noopener noreferrer"> Eligibility criteria and
-              further details of the programmes are available at the Centre for Academic Course webpage
-              <span class="text-primary" style="text-decoration: underline;">https://cac.annauniv.edu/</span>.
-            </a>
-          </p>
+
         </div>
       </div>
     </div>
 
     </section>
+    <script>
+      var pdfViewerUg = document.querySelector('#pdf-viewer-ug');
+      var pdfViewerPg = document.querySelector('#pdf-viewer-pg');
+      var pdfViewerPhd = document.querySelector('#pdf-viewer-phd');
+      window.onload = function () {
+        pdfViewerUg.src = "https://cac.annauniv.edu/udregulations/04.%20Reg%202019%20B.Arch.pdf";
+        pdfViewerPg.src = "https://cac.annauniv.edu/udregulations/04.%20Reg%202019%20B.Arch.pdf";
+        pdfViewerPhd.src = "https://cfr.annauniv.edu/research/regulation/Ph.D-Regulation.pdf";
+      };
+
+      const navLinks = document.querySelectorAll('.pdf-link');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+
+          navLinks.forEach(link => link.classList.remove('active-pdf'));
+
+          link.classList.add('active-pdf');
+
+          const pdfUrl = link.getAttribute('href');
+
+          pdfViewerUg.src = pdfUrl;
+          pdfViewerPg.src = pdfUrl;
+          pdfViewerPhd.src = pdfUrl;
+        });
+      });
+    </script>
 
   </main><!-- End #main -->
 
